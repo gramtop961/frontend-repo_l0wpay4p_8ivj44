@@ -1,40 +1,35 @@
-import React from 'react';
+import { Rocket } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-white to-neutral-100" aria-hidden="true" />
-      <div className="absolute -top-24 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-gradient-to-tr from-neutral-200/80 via-white to-neutral-100 blur-3xl" aria-hidden="true" />
-
-      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <a href="#top" className="font-semibold tracking-tight text-neutral-900">
-          Modern Architecture Studio
-        </a>
-        <nav className="hidden gap-8 text-sm text-neutral-700 sm:flex">
-          <a href="#work" className="hover:text-neutral-900">Work</a>
-          <a href="#about" className="hover:text-neutral-900">About</a>
-          <a href="#contact" className="hover:text-neutral-900">Contact</a>
-        </nav>
-      </header>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-10 sm:pb-28 sm:pt-16">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-6xl">
-            Contemporary architecture crafted with restraint and clarity.
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-neutral-700 sm:text-lg">
-            We design homes and spaces that balance form and function through honest materials, precise proportions, and light.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#work" className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/20">
-              View Work
-            </a>
-            <a href="#contact" className="inline-flex items-center rounded-full border border-neutral-300 px-5 py-3 text-sm font-medium text-neutral-900 transition hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-neutral-900/10">
-              Start a Project
-            </a>
+    <div className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-transparent pointer-events-none" />
+      <div className="max-w-6xl mx-auto px-4 pt-20 pb-24">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-tight">
+              Modern architecture that elevates everyday life
+            </h1>
+            <p className="mt-6 text-neutral-600 text-lg leading-relaxed">
+              We are a boutique architecture studio crafting refined, sustainable spaces — from intimate residences to adaptive reuse and cultural projects.
+            </p>
+            <div className="mt-8 flex items-center gap-3">
+              <a href="#work" className="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-5 py-3 text-sm hover:bg-neutral-700 transition-colors">
+                <Rocket className="h-4 w-4" /> View Portfolio
+              </a>
+              <a href="#contact" className="inline-flex rounded-md border border-neutral-300 px-5 py-3 text-sm hover:bg-neutral-100 transition-colors">Start a Project</a>
+            </div>
+          </div>
+          <div className="aspect-[4/3] rounded-xl bg-neutral-200/60 border border-neutral-200 overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1504457047772-27f3a4d7d59a?q=80&w=2069&auto=format&fit=crop"
+              alt="Minimalist architectural facade"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
